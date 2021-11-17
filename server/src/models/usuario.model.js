@@ -28,5 +28,5 @@ DataSchema.pre('findOneAndUpdate', function(next){
     next();
 })
 
-const usuarios = mongoose.model('Usuarios', DataSchema);
-module.exports = usuarios;
+const usuario = mongoose.model('Usuario', DataSchema);
+module.exports = usuario;

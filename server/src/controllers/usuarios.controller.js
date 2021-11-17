@@ -1,8 +1,9 @@
+const { update } = require('../models/usuario.model');
 const Usuario = require('../models/usuario.model')
 
 module.exports = {
     async index(req,res){
-        const user = await Usuario.Find();
+        const user = await Usuario.find();
 
         res.json(user);
     },
@@ -32,5 +33,12 @@ module.exports = {
         const { _id } = req.params;
         const user = await Usuario.findByIdAndDelete({_id});
         return res.json(user);
+    },
+    async update(req, res){
+        const {_id, nome_usuario, email_usuario, tipo_usuario, senha_usuario} = req.body;
+        const data = {nome_usuario, email_usuario, tipo_usuario, senha_usuario};
+        const user = await Usuario.findOneAndUpdate({ _id }, data, {new:true})
+
+        res.json(user)
     }
 }

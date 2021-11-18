@@ -1,12 +1,9 @@
-import Inicio from './pages/client/painel/index'
+import Routes from './routes'
 
 function App() {
   return (
     <div className="App">
-      {/*<header className="App-header">
-        <h1>Curso Basico de NodeJs com ReactJS</h1>
-  </header>*/}
-    <Inicio />
+      <Routes />
     </div>
   );
 }

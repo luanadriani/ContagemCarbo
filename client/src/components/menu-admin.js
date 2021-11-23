@@ -121,7 +121,7 @@ export default function MenuAdmin(props) {
                     <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                    {props.nomeDaPagina}
+                      {props.nomeDaPagina}
                     </Typography>
                 </Toolbar>
             </AppBar>

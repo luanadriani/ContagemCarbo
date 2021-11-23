@@ -67,8 +67,8 @@ export default function UsuariosEditar() {
 
         try {
             await api.put('/api/usuarios', data);
-
             window.location.href = '/admin/usuarios'
+            
         } catch (error) {
             alert('Erro ao atualizar o usuario!');
             console.error(error)
